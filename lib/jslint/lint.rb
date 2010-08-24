@@ -50,7 +50,7 @@ module JSLint
     end
 
     def option_string
-      @config.map { |k, v| "#{k}=#{v.inspect}" }.join(',')
+      "tmp='#{@config.to_json}'"
     end
 
     def check_java
